@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <h1 class="titulo-header">Página GOD</h1>
+    <nav>
+      <ul>
+        <li><a href="#title">Informacion</a></li>
+        <li><a href="#recomienda-si">input-radio</a></li>
+        <li><a href="#submitBtn">Comentarios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 id="title">Formulario </h1>
+  <p id="description">Contesta el siguiente formulario </p>
+  <form id="survey-form" >
+    <div class="cuadro1">
+      <label class="datos_personales" id="name-label">Nombre
+        <input id="name" type="text" placeholder="Ingresa tu nombre" required />
+      </label>
+    </div> 
+
+    <div class="cuadro1"> 
+      <label id="email-label">Email
+        <input id="email" type="email" placeholder="Ingresa tu correo" required />
+      </label>
+    </div> 
+
+    <div class="cuadro1"> 
+      <label id="number-label">Age
+        <input id="number" type="number" required min="13" max="120" placeholder="Edad" />
+      </label>
+    </div> 
+
+    <div class="cuadro1"> 
+      <label>Opciones
+        <select id="dropdown">
+          <option value="">(selecciona una)</option>
+          <option value="freeCodeCamp News">freeCodeCamp News</option>
+          <option value="2">freeCodeCamp YouTube Channel</option>
+        </select>
+      </label>
+    </div> 
+
+    <div class="radios"> 
+      <legend>¿Recomendarías mi chamba?</legend>
+      <label for="recomienda-si"><input id="recomienda-si" type="radio" name="recomienda" class="inline" checked value="si" /> Sí</label>
+      <label for="recomienda-no"><input id="recomienda-no" type="radio" name="recomienda" class="inline" value="no" /> No</label>
+    </div> 
+
+    <div class="chekin">
+      <legend>De qué te gusta chambiar</legend>
+      <label><input id="preferenciasFront" type="checkbox" name="preferencias" value="1" class="inline" checked /> Front</label>
+      <label><input id="preferenciasBack" type="checkbox" name="preferencias" value="2" class="inline" checked /> Back</label>
+    </div>
+
+    <div>
+      <legend>Comentarios</legend>
+      <textarea id="comentario"></textarea>
+    </div>
+
+    <div class="boton">
+      <input id="submitBtn" type="submit"/>
+    </div>
+  </form>
+    <div id="resultado-nombre"></div>
+    <div id="resultado-email"></div>
+    <div id="resultado-edad"></div>
+    <div id="resultado-opcion"></div>
+    <div id="resultado-recomienda"></div>
+    <div id="resultado-comentario"></div>
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>
